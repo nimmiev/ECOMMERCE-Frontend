@@ -5,6 +5,7 @@ const Checkout = () => {
   return (
     <>
         <h1>Address</h1>
+        <div className='form-container'>
         <form>
             <input type="text" className='input2' placeholder='Address Line 1' />            
             <input type="text"  className='input2' placeholder='Address Line 2' />
@@ -15,6 +16,7 @@ const Checkout = () => {
             <input type="text"  className='input2' placeholder='Phone' />
             <Link to="/my-orders" className='btn3-btn'>Confirm</Link>
         </form>
+        </div>
     </>
   )
 }

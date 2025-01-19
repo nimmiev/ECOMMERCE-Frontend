@@ -9,12 +9,14 @@ import {
 } from "react-router-dom";
 
 import Root from './routes/root'
-import ProductDetails from './pages/ProductDetails';
-import Cart from './pages/Cart';
-import Checkout from './pages/Checkout';
-import Register from './pages/Register';
-import Login from './pages/Login';
-import Orders from './pages/Orders';
+import ProductDetails from './pages/ProductDetails'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
+import Register from './pages/Register'
+import Login from './pages/Login'
+import Orders from './pages/Orders'
+import About from './pages/About'
+
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },
