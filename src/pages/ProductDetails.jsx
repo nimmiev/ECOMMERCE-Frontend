@@ -8,7 +8,7 @@ function ProductDetails() {
   const [product, setProduct] = useState({})
   // console.log(id)
   useEffect(() => {
-    axios.get(`http://localhost:3000/products/${id}`)
+    axios.get(`https://ecommerce-backend-rho.vercel.app/products/${id}`)
     .then((res) => {
       setProduct(res.data)
     })
