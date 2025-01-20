@@ -11,6 +11,7 @@ function login() {
   const loginformSubmitHandler = (e) => {
     e.preventDefault()
     console.log(data)
+    // axios.post("http://localhost:3000/user/login", data)
     axios.post("https://ecommerce-backend-rho.vercel.app/user/login", data)
     .then(res => {
       localStorage.setItem("token", res.data.token)

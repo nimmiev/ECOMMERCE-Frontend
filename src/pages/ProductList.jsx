@@ -10,7 +10,8 @@ function ProductList() {
 
     const [products, setProducts] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:3000")
+        // axios.get("http://localhost:3000")
+        axios.get("https://ecommerce-backend-rho.vercel.app/")
         .then((res) => {
             setProducts(res.data)
         })
