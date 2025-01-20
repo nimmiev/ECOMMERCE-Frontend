@@ -4,12 +4,13 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 function Register() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [userData, setUserData] = useState({})
   const navigate = useNavigate()
   const register = (e) => {
     e.preventDefault()
     
-    axios.post("http://localhost:3000/user/register", userData)
+    axios.post(`${API_URL}/user/register`, userData)
     .then(res => {
       alert("Registered successfully")
       navigate("/login")

@@ -6,9 +6,11 @@ import axios from 'axios'
 
 function ProductList() {
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const [products, setProducts] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:3000")
+        axios.get(`${API_URL}`)
         .then((res) => {
             setProducts(res.data)
         })
@@ -29,9 +31,7 @@ function ProductList() {
             <h1>Our Products</h1>
             <div className="product-list">
                 {products.map((product, index) => (
-                    <Link to={`/product-details/${product._id}`} key={index}>
-                        <ProductCard product={product} />
-                    </Link>
+                    <ProductCard product={product} />
                 ))}
             </div>
             <div className="text-center">

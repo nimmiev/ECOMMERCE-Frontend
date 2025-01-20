@@ -4,12 +4,14 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
 function ProductDetails() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const {id} = useParams()
   const [product, setProduct] = useState({})
   // console.log(id)
   useEffect(() => {
-    axios.get(`http://localhost:3000/products/${id}`)
+    axios.get(`${API_URL}/products/${id}`)
     .then((res) => {
+      console.log(res.data)
       setProduct(res.data)
     })
     .catch((err) => {
