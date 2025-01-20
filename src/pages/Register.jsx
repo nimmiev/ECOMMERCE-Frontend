@@ -10,7 +10,7 @@ function Register() {
   const register = (e) => {
     e.preventDefault()
     
-    axios.post(`${API_URL}/user/register`, userData)
+    axios.post("http://localhost:3000/user/register", userData)
     .then(res => {
       alert("Registered successfully")
       navigate("/login")

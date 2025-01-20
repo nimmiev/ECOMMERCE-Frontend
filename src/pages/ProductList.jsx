@@ -10,7 +10,7 @@ function ProductList() {
 
     const [products, setProducts] = useState([])
     useEffect(() => {
-        axios.get(`${API_URL}`)
+        axios.get("http://localhost:3000")
         .then((res) => {
             setProducts(res.data)
         })

@@ -9,7 +9,7 @@ function ProductDetails() {
   const [product, setProduct] = useState({})
   // console.log(id)
   useEffect(() => {
-    axios.get(`${API_URL}/products/${id}`)
+    axios.get(`http://localhost:3000/products/${id}`)
     .then((res) => {
       console.log(res.data)
       setProduct(res.data)
